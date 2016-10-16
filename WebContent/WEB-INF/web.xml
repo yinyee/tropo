@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
   <servlet>
-    <servlet-name>TestServlet</servlet-name>
-    <servlet-class>com.github.yinyee.tropo.TestServlet</servlet-class>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.github.yinyee.tropo.HelloServlet</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>CompleteServlet</servlet-name>
-    <servlet-class>com.github.yinyee.tropo.CompleteServlet</servlet-class>
+    <servlet-name>RecordServlet</servlet-name>
+    <servlet-class>com.github.yinyee.tropo.RecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PostServlet</servlet-name>
+    <servlet-class>com.github.yinyee.tropo.PostServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>TestServlet</servlet-name>
+    <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/sayhello</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>CompleteServlet</servlet-name>
-    <url-pattern>/complete</url-pattern>
+    <servlet-name>RecordServlet</servlet-name>
+    <url-pattern>/record</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PostServlet</servlet-name>
+    <url-pattern>/post</url-pattern>
   </servlet-mapping>
 </web-app>
