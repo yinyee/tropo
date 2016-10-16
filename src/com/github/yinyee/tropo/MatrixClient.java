@@ -64,4 +64,18 @@ public class MatrixClient {
 	    int rc = client.executeMethod(put);
 	    System.out.println(rc + " - " + put.getResponseBodyAsString());
 	}	
+	
+	public String readLastMessage(String roomId) throws IOException {
+        HttpClient client = new HttpClient();
+        GetMethod get = new GetMethod(baseUrl + "/_matrix/client/r0/rooms/" + roomId + "/messages?access_token=" + mAccessToken + "&dir=b&limit=1");
+        
+        int rc = client.executeMethod(get);
+        System.out.println(rc + " - " + get.getResponseBodyAsString());
+        
+        JSONObject obj = JSONObject.fromObject(get.getResponseBodyAsString());
+        String body = obj.getJSONArray("chunk").getJSONObject(0).getJSONObject("content").optString("body");
+        body = (body != null) ? body : "";
+        return body;
+    }
+	
 }

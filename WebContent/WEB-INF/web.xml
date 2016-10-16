@@ -9,8 +9,8 @@
     <servlet-class>com.github.yinyee.tropo.RecordServlet</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>PostServlet</servlet-name>
-    <servlet-class>com.github.yinyee.tropo.PostServlet</servlet-class>
+    <servlet-name>SMSServlet</servlet-name>
+    <servlet-class>com.github.yinyee.tropo.SMSServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
@@ -21,7 +21,7 @@
     <url-pattern>/record</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>PostServlet</servlet-name>
-    <url-pattern>/post</url-pattern>
+    <servlet-name>SMSServlet</servlet-name>
+    <url-pattern>/sms</url-pattern>
   </servlet-mapping>
 </web-app>
